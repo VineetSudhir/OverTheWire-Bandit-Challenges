@@ -12,10 +12,10 @@ Read through the file data.txt for the password to the word 'millionth'.
 
 **Solution Steps:**
 
-1. Use the `ls -la` command to view all the contents in the 'bandit7' directory
+1. Use the `ls -la` command to view all the contents in the 'bandit7' directory in a long-listing format.
    
-2. Use the `grep -w "millionth" data.txt` command to view the text on the line that matches with the word 'millionth'.
-   - Use the `-w` option to match only the line with whole words, "millionth".
+2. Use the `grep -w "millionth" data.txt` command to view **only** the lines with 'millionth' as a whole word.
+   
   
 **Tips Learned:**
 1. Word Constituent Characters -> letters, digits, & underscore
