@@ -1,4 +1,4 @@
-# Bandit Level 9: Searching for the Line that occurs Only Once in a Text File
+# Bandit Level 9: Searching for the Line that Occurs Only Once in a Text File
 
 **Objective**
 Search for the password, the line that occurs only once in the text file, *data.txt*, consisting 1001 lines of text.
