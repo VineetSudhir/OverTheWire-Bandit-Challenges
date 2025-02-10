@@ -21,8 +21,7 @@ Locate and read the file *somewhere in the server* for the password to the next 
 ``` cd .. ```
 
 3. Search for Files that have the 3 properties listed above
-- Use the `find -group -user -size` command
-``` find -user bandit7 -group bandit6 -size 33c ```
+- Use the ``` find -user bandit7 -group bandit6 -size 33c ``` command
     
 4. Read the contents of the file, '.var/lib/dpkg/info/bandit7.password' in the root directory:
 - Use the `cat` command to display the password stored in the file:
