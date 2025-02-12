@@ -1,4 +1,4 @@
-# Bandit Level 8: Searching for the password next to the word *millionth* in the file data.txt
+# Bandit Level 08: Searching for the password next to the word *millionth* in the file data.txt
 
 **Objective:**
 Read through the file data.txt for the password to the word 'millionth'. 
