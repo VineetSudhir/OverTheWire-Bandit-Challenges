@@ -1,4 +1,4 @@
-# Bandit Level 2: Reading the `-` File for the Password
+# Bandit Level 02: Reading the `-` File for the Password
 
 **Objective:**
 Locate and read the file named '-' in the home directory to retrieve the password for the next level.
