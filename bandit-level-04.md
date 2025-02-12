@@ -1,4 +1,4 @@
-# Bandit Level 4: Reading the Hidden File for the Password
+# Bandit Level 04: Reading the Hidden File for the Password
 
 **Objective:**
 Locate and read the hidden file in the 'inhere' directory to retrieve the password for the next level.
