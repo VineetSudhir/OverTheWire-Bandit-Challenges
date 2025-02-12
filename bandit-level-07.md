@@ -1,4 +1,4 @@
-# Bandit Level 7: Searching for a File with the Password somewhere in the Server
+# Bandit Level 07: Searching for a File with the Password somewhere in the Server
 
 **Objective:**
 Locate and read the file *somewhere in the server* for the password to the next level that has the following properties, 33 bytes, owned by user bandit7, & owned by group bandit6. 
