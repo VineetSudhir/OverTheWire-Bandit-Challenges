@@ -15,4 +15,7 @@ Locate and decode the Base64-encoded data in data.txt to retrieve the password f
 ---
 
 **Tips Learned**
-1. **Base64**, originally used to encode binary data, can also be used to encode plain text.
+1. **ASCII** in modern systems are 8-bit byte, no longer 7-bits.
+2. When encoding to Base64, the original plain text is first converted to 8-bit binary data and grouped.
+3. Then grouped to **24-bit chunks**, as Base64 **always** processes data in 24-bit chunks. If data doesn't fit into 24-bit groups, **padding** is used make it a 24-bit   chunk.
+4. The 24-bit chunks are split into **6-bit segments** and mapped to **Base64** characters.
