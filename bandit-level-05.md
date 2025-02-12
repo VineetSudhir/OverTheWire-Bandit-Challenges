@@ -1,4 +1,4 @@
-# Bandit Level 5: Reading the Only Human-Readable File for the Password
+# Bandit Level 05: Reading the Only Human-Readable File for the Password
 
 **Objective:**
 Locate and read the Only Human-Readable file in the 'inhere' directory to retrieve the password for the next level.
