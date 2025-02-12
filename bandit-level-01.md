@@ -1,4 +1,4 @@
-# Bandit Level 1: Reading the `readme` File for the Password
+# Bandit Level 01: Reading the `readme` File for the Password
 
 **Objective:**
 Locate and read the readme file in the home directory to retrieve the password for the next level.
