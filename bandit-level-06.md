@@ -1,4 +1,4 @@
-# Bandit Level 6: Searching for a File with the Password based on its Properties
+# Bandit Level 06: Searching for a File with the Password based on its Properties
 
 **Objective:**
 Locate and read the file that is 1033 bytes in size, human-readable, & not executable in the 'inhere' directory to retrieve the password for the next level.
