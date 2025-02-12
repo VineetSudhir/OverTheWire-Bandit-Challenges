@@ -1,4 +1,4 @@
-# Bandit Level 0: Connect via SSH
+# Bandit Level 00: Connect via SSH
 
 **Objective:**
 Learn how to connect to the bandit server using SSH.
