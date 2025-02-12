@@ -1,4 +1,4 @@
-# Bandit Level 3: Reading the `spaces in this filename` File for the Password
+# Bandit Level 03: Reading the `spaces in this filename` File for the Password
 
 **Objective:**
 Locate and read the 'spaces in this filename' file in the home directory to retrieve the password for the next level.
