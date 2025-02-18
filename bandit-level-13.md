@@ -12,28 +12,30 @@ Reconstruct the original file from a hexdump of a repeatedly compressed file to 
 
 **Solution Steps**
 
-1. Create a temporary directory to work on `mktemp -d`.
-2. Copy the original file, `/home/bandit12/data.txt` to the newly created temp directory, `/tmp/tmp.ehgG9XiZ7U`.
-3. Rename the copied file in the temp directory to prevent any confusion, `mv data.txt copy-data.txt`.
-4. Create a temp file, move it to the temp directory, `/tmp/tmp.ehgG9XiZ7U`, and rename it, 'samplefile1' to write the output from reverting the hexdump file `data.txt` to the file.
+1. Create a Temporary Directory to work on `mktemp -d`.
+2. Copy the Original File to the Temporary Directory `cp /home/bandit12/data.txt /tmp/tmp.ehgG9XiZ7U`.
+3. Rename the Copied File for clarity, `mv data.txt copy-data.txt`.
+4. Create a New Temporary File and move it to the Temporary Directory `/tmp/tmp.ehgG9XiZ7U`, and rename the file:
    `mktemp`
    `mv /tmp/tmp.2KHYFvQupK /tmp/tmp.ehgG9XiZ7U`
    `mv tmp.2KHYFvQupK samplefile1`
-5. Revert the hexdump file to the compressed format, `xxd -r copy1-data.txt samplefile1` and save the output to the 'samplefile1` file.
-6. Use `file samplefile1` to find out what type of compressed format it is in.
-7. Rename the file with the appropriate file extension, `mv samplefile1 samplefile1.gz` to successfully decompress the file.
-8. Decompress the file, `gzip -d samplefile1.gz`
-9. The file is now in bzip2 compressed format, so rename file with the extension `bz2` to decompress the file,
-    `bzip2 -d samplefile.bz2`
-10. The file is now in gzip compressed format again. Rename and decompress again, `gzip -d samplefile1.gz`.
-11. The file is now in a tar file format. extract the archive with `tar --extract --file samplefile1` to get another tar formatted file `data5.bin`.
-12. Extract again, `tar --extract --file data5.bin` to get a bzip2 compressed formatted file, `data6.bin`.
-13. Decompress again, `bzip2 -d data6.bin` to get a tar file format, `data6.bin.out`.
-14. Extract again, `tar --extract --file data6.bin.out` to get a gzip compressed formatted file, `data8.bin`.
-15. Rename the file with the correct file extension `.gz` and decompress again, `gzip -d data8.gz` to get the original file with readable text containing the password to the next level `data8`.
-
+5. Convert the Hexdump back to a Compressed Binary File and save the output in, `samplefile1`:
+   `xxd -r copy1-data.txt samplefile1`
+6. Determine the File Type: `file samplefile1`.
+7. Rename the File with the Correct File Extension, `mv samplefile1 samplefile1.gz` to Successfully Decompress the File. Rename the File based on the Output from `file samplefile1`.
+8. Decompress the file: `gzip -d samplefile1.gz`.
+9. The file is now in **bzip2 format**. Rename and Decompress the Bzip2 File: `bzip2 -d samplefile.bz2`.
+10. The file is now in **gzip format again**. Rename and Decompress the Gzip File again: `gzip -d samplefile1.gz`.
+11. The file is now in **tar format**. Extract the tar archive `tar --extract --file samplefile1`. This extracts another tar file, `data5.bin`.
+12. Extract the Tar Archive Again, `tar --extract --file data5.bin`. This extracts a **bzip2 compressed file**, `data6.bin`.
+13. Decompress the Bzip2 File again: `bzip2 -d data6.bin` resulting in a tar file, `data6.bin.out`.
+14. Extract the Tar File: `tar --extract --file data6.bin.out`. This extracts a **gzip compressed file**, `data8.bin`.
+15. Rename and Decompress the Gzip File:
+    `mv data8.bin data8.gz`
+    `gzip -d data8.gz`
+16. The Final Extracted File, `data8`, contains the **readable text with the password** for the next level.
 ---
 
 **Tips Learned**
-1. Add the appropriate file extension to the filename by renaming using `mv` for the commands, `gzip` & `bzip2`.
-2. Use a temporary directory and files to prevent data loss and prevents unnecessary files from accumulating in the main working directory.  
+1. Rename files with the correct extension (`.gz, .bz2, .tar`) using `mv` for a successful decommpression.
+2. Use a Temporary Directory and Files to prevent accidental data loss and unnecessary files from accumulating in the main working directory.  
